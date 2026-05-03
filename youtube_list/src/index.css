@@ -1,0 +1,108 @@
+:root {
+  --text: #5e6575;
+  --text-h: #111827;
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --surface-soft: #eef2f7;
+  --border: #dde3ec;
+  --accent: #e11d48;
+  --accent-strong: #be123c;
+  --accent-bg: rgba(225, 29, 72, 0.1);
+  --accent-border: rgba(225, 29, 72, 0.35);
+  --shadow: 0 20px 45px rgba(15, 23, 42, 0.09);
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/145% var(--sans);
+  letter-spacing: 0;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #a7b0c0;
+    --text-h: #f8fafc;
+    --bg: #0f172a;
+    --surface: #151f33;
+    --surface-soft: #1e293b;
+    --border: #2e3a50;
+    --accent: #fb7185;
+    --accent-strong: #f43f5e;
+    --accent-bg: rgba(251, 113, 133, 0.14);
+    --accent-border: rgba(251, 113, 133, 0.36);
+    --shadow: 0 24px 55px rgba(0, 0, 0, 0.32);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 800;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: clamp(36px, 7vw, 72px);
+  line-height: 0.98;
+  letter-spacing: 0;
+  margin: 8px 0 16px;
+  @media (max-width: 1024px) {
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--surface-soft);
+}
